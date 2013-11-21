@@ -92,6 +92,8 @@ END_EXPECT
 fi
 
 pushd riak/rel/riak
+./bin/riak stop
+rm -rvf data/* log/*
 ulimit -n 8192
 ulimit -n
 ./bin/riak start
