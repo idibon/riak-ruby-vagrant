@@ -22,7 +22,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network :forwarded_port, guest: 8087, host: 17017
   config.vm.network :forwarded_port, guest: 8098, host: 17018
 
-  config.vm.provision 'shell', path: 'provision.sh'
+  config.vm.provision 'shell', path: 'provision-ubuntu.sh'
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
