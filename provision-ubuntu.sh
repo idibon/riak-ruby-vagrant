@@ -64,6 +64,7 @@ sed -e 's/anti_entropy = on/anti_entropy = off/;' -i.back /etc/riak/riak.conf
 sed -e 's/storage_backend = bitcask/storage_backend = memory/;' -i.back /etc/riak/riak.conf
 sed -e 's/listener.http.internal = 127.0.0.1:8098/listener.http.internal = 0.0.0.0:8098/;' -i.back /etc/riak/riak.conf
 sed -e 's/listener.protobuf.internal = 127.0.0.1:8087/listener.protobuf.internal = 0.0.0.0:8087/;' -i.back /etc/riak/riak.conf
+cp /vagrant/advanced.config /etc/riak/advanced.config
 
 sudo riak stop
 rm -rvf /var/lib/riak/{data,log}/*
